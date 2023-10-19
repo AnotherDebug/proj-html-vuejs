@@ -15,8 +15,6 @@ components: {
 
 <template>
 
-  <h1>Ciao</h1>
-
   <Header />
 
   <Main />
