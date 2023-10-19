@@ -1,27 +1,23 @@
 <script>
+import Navbar from './partials/Navbar.vue'
 export default {
-    name: 'Header'
+    name: 'Header',
+    components: {
+        Navbar
+    }
 }
 </script>
 
 
 <template>
     <header>
-        <div class="container-big d-flex ">
+        <div class="container-big d-flex">
             <div class="logo">
                 <img src="../assets/images/construction_logo.png" alt="">
             </div>
-            <div class="navBar d-flex ">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">WORK</a></li>
-                    <li><a href="#">ARTICLES</a></li>
-                </ul>
-                <div class="button">
+           <Navbar />
+            <div class="button">
                     <button>GET QUOTE</button>
-                </div>
             </div>
         </div>
     </header>
@@ -41,21 +37,6 @@ header {
         height: 100%;
     }
 
-    .navBar{
-        align-items: center;
-        ul {
-            list-style: none;
-            padding-right: 15px;
-            li {
-                display: inline-block;
-                padding: 0 15px;
-                a{
-                    text-decoration: none;
-                    color: $dimgray-color;
-                }
-            }
-        }
-    }
     .button {
         button {
             padding: 10px 20px;
