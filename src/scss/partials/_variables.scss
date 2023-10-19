@@ -1,14 +1,25 @@
+//Color palette
 $white-color: #ffffff;
 $yellow-color: #fed03d;
 $dimgray-color: #333333;
-$whitesmoke-color: #f5f5f5;
+$whiteSmoke-color: #f5f5f5;
 $indigo-color: #55328b;
 $black-color: #1f1f1f;
 $orange-color: #fe813e;
-$dodgerblue-color: #517ad2;
+$dodgerBlue-color: #517ad2;
 $green-color: #84cb01;
-$darkturquoise-color: #21a6b5;
+$darkTurquoise-color: #21a6b5;
+
+
+
+//Font da ricontrollare
 $primary-font: Arial, Helvetica, sans-serif;
-$container-width: 80%;
-$container-max-width: 1200px;
 $font-weight600: 600;
+
+
+
+//Container
+$containerBig-width: 90%;
+$containerBig-max-width: 1200px;
+$containerSmall-width: 70%;
+$containerSmall-max-width: 1000px;

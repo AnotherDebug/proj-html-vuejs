@@ -10,10 +10,16 @@ body {
     font-family: $primary-font;
 }
 
-.container {
-    width: $container-width;
+.container-big {
+    width: $containerBig-width;
+    max-width: $containerBig-max-width;
     margin: 0 auto;
-    max-width: $container-max-width;
+}
+
+.container-small {
+    width: $containerSmall-width;
+    max-width: $containerSmall-max-width;
+    margin: 0 auto;
 }
 
 .d-flex {
