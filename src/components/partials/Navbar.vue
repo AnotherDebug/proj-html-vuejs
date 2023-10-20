@@ -20,23 +20,43 @@ export default {
 
 
 <style lang="scss" scoped>
-
 @use '../../scss/partials/variables' as *;
+
 .navBar {
     align-items: center;
-    margin-left: 250px;
+    margin-left: 270px;
 
     ul {
         list-style: none;
         padding-right: 15px;
 
         li {
+
             display: inline-block;
             padding: 0 15px;
 
             a {
+                position: relative;
                 text-decoration: none;
                 color: $dimgray-color;
+
+                &:hover {
+                    color: $yellow-color;
+                    transition: all 0.2s;
+
+                    &:after {
+                        position: absolute;
+                        content: '\2bc6';
+                        color: $white-color;
+                        font-size: 20px;
+                        top: 70px;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 3;
+
+                    }
+                }
+
             }
         }
     }
