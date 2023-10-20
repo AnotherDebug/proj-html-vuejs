@@ -49,7 +49,7 @@ export default {
                         content: '\2bc6';
                         color: $white-color;
                         font-size: 20px;
-                        top: 70px;
+                        top: 59px;
                         left: 50%;
                         transform: translate(-50%, -50%);
                         z-index: 3;

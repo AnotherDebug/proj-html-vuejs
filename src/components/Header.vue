@@ -31,7 +31,7 @@ export default {
 @use '../scss/partials/variables' as *;
 
 header {
-    height: 120px;
+    height: 100px;
     width: 100%;
     position: fixed;
     z-index: 999;
