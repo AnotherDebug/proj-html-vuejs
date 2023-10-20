@@ -138,7 +138,32 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="footerBottom"></div>
+        <div class="footerBottom">
+            <div class="container-big d-flex ">
+                <div class="copyright">
+                    <p>&copy; COPYRIGHT 2012 - 2023 | AVADA THEME BY <a href="#">ANOTHERDEBUG</a> | ALL RIGHTS RESERVED |
+                        POWERED BY
+                        <a href="#">VITE</a>
+                    </p>
+                </div>
+                <div class="social">
+                    <ul class="d-flex">
+                        <li>
+                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
 </template>
 
@@ -149,7 +174,8 @@ export default {
 footer {
     background-color: $black-color;
     padding-top: 50px;
-    border-top: 8px solid lighten($dimgray-color, $amount: 10%);;
+    border-top: 8px solid lighten($dimgray-color, $amount: 10%);
+    ;
 
     .footerTop {
         padding-bottom: 50px;
@@ -319,5 +345,50 @@ footer {
             }
         }
     }
-}
-</style>
+
+    .footerBottom {
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        background-color: black;
+        color: $white-color;
+
+        .container-big {
+            justify-content: space-between;
+            line-height: 80px;
+
+            .copyright {
+                color: lighten($black-color, $amount: 20%);
+
+                a {
+                    color: lighten($dimgray-color, $amount: 20%);
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $yellow-color;
+                        transition: 0.5s;
+                    }
+                }
+            }
+
+            .social {
+                ul {
+                    li {
+                        list-style: none;
+
+                        a {
+                            position: relative;
+                            margin-left: 20px;
+                            color: lighten($dimgray-color, $amount: 20%);
+
+                            &:hover {
+                                color: lighten($black-color, $amount: 10%);
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}</style>
