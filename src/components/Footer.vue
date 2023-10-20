@@ -149,7 +149,7 @@ export default {
 footer {
     background-color: $black-color;
     padding-top: 50px;
-    border: 5px solid #000;
+    border-top: 8px solid lighten($dimgray-color, $amount: 10%);;
 
     .footerTop {
         padding-bottom: 50px;
