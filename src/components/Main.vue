@@ -1,12 +1,11 @@
 <script>
 export default {
-name: 'Main'
+    name: 'Main'
 }
 </script>
 
 
 <template>
-
     <main>
         <section class="jumbotron">
             <img src="../assets/images/home-slider-62528242.jpg" alt="">
@@ -19,25 +18,32 @@ name: 'Main'
                 </div>
             </div>
         </section>
+
+        <section class="constructionProject">
+            <h2>Do You Have A Construction Project We Can Help With?</h2>
+            <div class="button">
+                <button>get a free quote</button>
+            </div>
+        </section>
     </main>
-  
 </template>
 
 
 <style lang="scss" scoped>
-
 @use '../scss/partials/variables' as *;
-   main {
+
+main {
     height: 100%;
     margin-top: 100px;
+
     .jumbotron {
         position: relative;
         text-transform: uppercase;
         text-align: center;
-        height: 100%;
 
         img {
             width: 100%;
+            margin-bottom: -5px;
         }
 
         .centeredText {
@@ -90,5 +96,35 @@ name: 'Main'
             }
         }
     }
-   }
+
+    .constructionProject {
+        position: relative;
+        text-align: center;
+        line-height: 100px;
+        height: 100px;
+        background-color: $yellow-color;
+
+        .button {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            button {
+                padding: 10px 20px;
+                background-color: $dimgray-color;
+                color: $white-color;
+                border: none;
+                cursor: pointer;
+                text-transform: uppercase;
+                transition: all 0.3S;
+
+                &:hover {
+                    background-color: $yellow-color;
+                    color: $dimgray-color;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
 </style>
