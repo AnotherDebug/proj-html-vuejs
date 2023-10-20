@@ -32,11 +32,18 @@ export default {
 
 header {
     height: 120px;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    background-color: $white-color;
+    
 
     .container-big {
         justify-content: space-between;
         align-items: center;
         height: 100%;
+        
     }
 
     .button {

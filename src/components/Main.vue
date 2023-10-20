@@ -29,6 +29,7 @@ name: 'Main'
 @use '../scss/partials/variables' as *;
    main {
     height: 100%;
+    margin-top: 120px;
     .jumbotron {
         position: relative;
         text-transform: uppercase;
