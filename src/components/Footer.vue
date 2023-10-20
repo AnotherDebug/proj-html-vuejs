@@ -10,43 +10,131 @@ export default {
         <div class="footerTop">
             <div class="container-big">
                 <div class="row d-flex ">
-                    <div class="col learnMore debug">
+
+                    <!-- LEARN MORE -->
+                    <div class="col learnMore">
                         <div class="logo">
-                            <img src="" alt="logo">
+                            <img src="../assets/images/footer-logo.png" alt="logo">
                         </div>
                         <div class="text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quos nemo, unde consequuntur
-                                aspernatur reprehenderit hic laboriosam nulla quia magni obcaecati molestias itaque sed
-                                tempora voluptatum quam deserunt laudantium quis?</p>
+                            <p>We are specialists in the construction of unique and exclusive properties. Our work inspires.
+                                We pride ourselves on delivering outstanding quality and design for leading clients across
+                                the world.</p>
                         </div>
                         <div class="button">
                             <button>learn more</button>
                         </div>
                     </div>
-                    <div class="col latestTweets d-flex  debug">
-                        <div class="footerLogo debug">logo</div>
-                        <div class="tweets">
-                            <!-- Singolo tweet "elemento dinamico" -->
-                            <div class="tweet debug">
-                                <div class="title">
-                                    <h5>ThemeFusion</h5>
+
+                    <!-- LATEST TWEETS -->
+                    <div class="col latestTweets">
+
+                        <div class="titleCol">
+                            <h3>latest tweets</h3>
+                        </div>
+
+                        <div class="boxTweets d-flex">
+
+
+                            <!-- SINGOLO TWEET -->
+                            <div class="boxTweet d-flex ">
+                                <div class="Logo">
+                                    <img src="../assets/images/3a74ce3d0532b7773b174c45ca3bd05a_normal.png" alt="">
                                 </div>
-                                <h5>@Theme_Fusion</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit suscipit nam mollitia
-                                    ut
-                                    consequuntur. Eaque itaque officiis et ratione, porro sapiente quidem atque ipsam
-                                    mollitia
-                                    illo, magni, iste optio dolore.</p>
-                                <div class="img">
-                                    <img src="" alt="img">
+                                <div class="infoTweet">
+                                    <div class="tweet ">
+                                        <div class="title d-flex ">
+                                            <h5>ThemeFusion</h5>
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </div>
+                                        <h5>@Theme_Fusion</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit suscipit nam
+                                            mollitia
+                                            ut
+                                            consequuntur. Eaque itaque officiis et ratione, porro sapiente quidem atque
+                                            ipsam
+                                            mollitia
+                                            illo, magni, iste optio dolore.</p>
+                                        <div class="img">
+                                            <img src="../assets/images/En2TRxLW4AEiWUN.jpeg" alt="img">
+                                        </div>
+                                        <div class="tweetMenu d-flex ">
+                                            <div class="likeShare d-flex">
+                                                <div class="like">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                                <div class="share">
+                                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                                </div>
+                                            </div>
+                                            <div class="time">
+                                                <p>22h</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            
+                            <!-- /SINGOLO TWEET -->
+
+
+
                         </div>
 
                     </div>
-                    <div class="col contactUs debug">d</div>
-                    <div class="col findUs debug">f</div>
+
+                    <!-- CONTACT US -->
+                    <div class="col contactUs">
+
+                        <div class="titleCol">
+                            <h3>contact us today</h3>
+                        </div>
+
+                        <div class="menuContactUs">
+                            <ul>
+                                <li class="d-flex">
+                                    <i class="fa-solid fa-globe"></i>
+                                    <p>Corporate Location
+                                        1600 Amphitheatre Parkway
+                                        London WC1 1BA</p>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fa-solid fa-house-chimney"></i>
+                                    <p>Residential Location
+                                        9521 Broadsberry Avenue
+                                        Paddington RC7 9ZA</p>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fa-solid fa-phone-flip"></i>
+                                    <p>1.800.458.556 / 1.800.532.2112</p>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <p>
+                                        info@your-domain.com</p>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>Monday – Friday: 9:00 AM – 6:00 PM</p>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>Saturday – Sunday: 9:00 AM – 12:00 PM</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- FIND US -->
+                    <div class="col findUs">
+
+                        <div class="titleCol">
+                            <h3>find us</h3>
+                        </div>
+
+                        <div class="map">
+                            <img src="../assets/images/staticmap.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -56,23 +144,180 @@ export default {
 
 
 <style lang="scss" scoped>
+@use '../scss/partials/variables' as *;
+
 footer {
+    background-color: $black-color;
+    padding-top: 50px;
+    border: 5px solid #000;
+
     .footerTop {
+        padding-bottom: 50px;
+
+        h3 {
+            text-transform: uppercase;
+        }
+
         .row {
             justify-content: space-between;
 
             .col {
                 width: 100%;
-                // da eliminare
-                height: 200px;
             }
 
-            .latestTweets {          
-                .tweets {
+            .learnMore {
+                padding: 10px;
+
+                .text {
+                    margin-top: 20px;
+
+                    p {
+                        color: lighten($dimgray-color, $amount: 20%);
+                        line-height: 25px;
+                    }
+                }
+
+                .button {
+                    margin-top: 20px;
+
+                    button {
+                        padding: 10px 20px;
+                        background-color: $yellow-color;
+                        color: $dimgray-color;
+                        border: none;
+                        cursor: pointer;
+                        text-transform: uppercase;
+                        transition: all 0.3S;
+
+                        &:hover {
+                            background-color: $dimgray-color;
+                            color: $white-color;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+
+            .latestTweets {
+                padding-left: 20px;
+
+                .boxTweets {
+                    height: 300px;
                     overflow-y: auto;
-                    &::-webkit-scrollbar{ width: 0 !important}
+                    flex-direction: column;
+
+                    &::-webkit-scrollbar {
+                        width: 0 !important
+                    }
+
+                    &:hover {
+                        background-color: #000;
+                    }
+
+                    padding-top: 30px;
+
+                    .Logo {
+                        margin-left: 10px;
+
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .infoTweet {
+
+                        .tweet {
+                            padding: 10px;
+                            color: lighten($dimgray-color, $amount: 20%);
+
+                            p {
+                                color: $white-color;
+                            }
+
+                            .img {
+                                img {
+                                    width: 100%;
+                                    margin-top: 15px;
+                                    margin-bottom: 10px;
+                                }
+                            }
+
+                            .title {
+                                justify-content: space-between;
+                                color: $white-color;
+
+                                i {
+                                    color: lighten($dimgray-color, $amount: 20%);
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        color: #1d9bf0;
+                                        transition: 0.5s;
+                                    }
+                                }
+                            }
+
+                            .tweetMenu {
+                                justify-content: space-between;
+
+                                .time {
+                                    p {
+                                        color: lighten($dimgray-color, $amount: 20%);
+                                    }
+                                }
+
+                                .likeShare {
+                                    .like {
+                                        margin-right: 20px;
+                                    }
+
+                                    i {
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .contactUs {
+                padding-left: 30px;
+
+                .menuContactUs {
+                    padding-top: 30px;
+                    padding-right: 30px;
+
+                    ul {
+                        list-style: none;
+
+                        li {
+                            color: lighten($dimgray-color, $amount: 20%);
+                            margin-bottom: 10px;
+
+                            i {
+                                padding-right: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .findUs {
+                padding-left: 30px;
+
+                .map {
+                    padding-top: 30px;
+
+                    img {
+                        width: 100%;
+                    }
                 }
             }
         }
     }
-}</style>
+}
+</style>
