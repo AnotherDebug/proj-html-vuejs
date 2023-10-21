@@ -1,12 +1,18 @@
 <script>
+import CardMoCo from './partials/CardMoCo.vue'
 export default {
-    name: 'Main'
+    name: 'Main',
+    components: {
+        CardMoCo
+    }
 }
 </script>
 
 
 <template>
     <main>
+
+
         <section class="jumbotron">
             <img src="../assets/images/home-slider-62528242.jpg" alt="">
             <div class="centeredText">
@@ -19,12 +25,39 @@ export default {
             </div>
         </section>
 
+
         <section class="constructionProject">
             <h2>Do You Have A Construction Project We Can Help With?</h2>
             <div class="button">
                 <button>get a free quote</button>
             </div>
         </section>
+
+
+        <section class="modernCostruction">
+            <div class="title">
+                <h2>Specialists In Modern Construction</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt consectetur perspiciatis error natus,
+                    aperiam veritatis officiis eius quibusdam quo soluta quaerat dolores?</p>
+            </div>
+            <div class="container-big">
+                <div class="row d-flex ">
+
+
+                    <CardMoCo />
+
+                    <CardMoCo />
+
+                    <CardMoCo />
+
+                    <CardMoCo />
+
+
+                </div>
+            </div>
+        </section>
+
+
     </main>
 </template>
 
@@ -109,11 +142,12 @@ main {
             top: 100px;
             left: 50%;
             transform: translate(-50%, -50%);
+
             button {
                 padding: 10px 20px;
                 background-color: $dimgray-color;
                 color: $white-color;
-                border: none;
+                border: 2px solid $white-color;
                 cursor: pointer;
                 text-transform: uppercase;
                 transition: all 0.3S;
@@ -122,7 +156,43 @@ main {
                     background-color: $yellow-color;
                     color: $dimgray-color;
                     text-transform: uppercase;
+                    border: 2px solid $black-color;
                 }
+            }
+        }
+    }
+
+    .modernCostruction {
+        text-align: center;
+        margin: 100px 0;
+
+        .title {
+            margin: 0 300px;
+
+            h2 {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: $yellow-color;
+                    width: 12%;
+                    height: 2px;
+                    top: 50px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            p {
+                margin-top: 50px;
+            }
+        }
+
+        .container-big {
+            .row {
+                justify-content: space-around;
+                margin-top: 80px;
             }
         }
     }
