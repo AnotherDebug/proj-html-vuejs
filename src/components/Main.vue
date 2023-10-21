@@ -1,13 +1,15 @@
 <script>
 import CardCount from './partials/CardCount.vue'
 import CardMoCo from './partials/CardMoCo.vue'
+import CardValues from './partials/CardValues.vue'
 import CardWork from './partials/CardWork.vue'
 export default {
     name: 'Main',
     components: {
         CardMoCo,
         CardCount,
-        CardWork
+        CardWork,
+        CardValues
     }
 }
 </script>
@@ -100,6 +102,33 @@ export default {
 
             </div>
 
+            <div class="footerWork">
+                <p>VIEW ALL PROJECTS</p>
+            </div>
+
+        </section>
+
+
+        <section class="Values">
+            <div class="container-small">
+                <div class="title">
+                    <h2>Our Core Values</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt consectetur perspiciatis error
+                        natus,
+                        aperiam veritatis officiis eius quibusdam quo soluta quaerat dolores?</p>
+                </div>
+                <div class="row d-flex ">
+
+                   <CardValues />
+
+                   <CardValues />
+
+                   <CardValues />
+                   
+                   <CardValues />
+
+                </div>
+            </div>
         </section>
 
 
@@ -278,6 +307,7 @@ main {
 
     .work {
         text-align: center;
+        margin-bottom: 80px;
 
         .title {
             margin: 0 300px;
@@ -301,9 +331,79 @@ main {
                 margin-top: 50px;
             }
         }
+
         .row {
             justify-content: center;
             margin: 50px 0;
+        }
+
+        .footerWork {
+            position: relative;
+            max-width: 500px;
+            margin: 100px auto;
+            text-align: center;
+
+            p {
+                color: $dimgray-color;
+
+                &::before {
+                    content: " ";
+                    display: block;
+                    height: 2px;
+                    width: 300px;
+                    position: absolute;
+                    top: 50%;
+                    left: 84%;
+                    background: $whiteSmoke-color;
+                }
+
+                &::after {
+                    content: " ";
+                    height: 2px;
+                    width: 300px;
+                    background: $whiteSmoke-color;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    right: 84%;
+                }
+            }
+        }
+    }
+
+    .Values {
+        text-align: center;
+        background-color: $whiteSmoke-color;
+        padding: 50px 0;
+
+        .container-small {
+            .title {
+
+                h2 {
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background-color: $yellow-color;
+                        width: 150px;
+                        height: 2px;
+                        top: 150%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                p {
+                    margin-top: 50px;
+                    color: lighten($dimgray-color, $amount: 20%);
+                }
+            }
+
+            .row {
+                justify-content: center;
+                justify-content: space-around;
+            }
         }
     }
 }
