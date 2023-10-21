@@ -1,9 +1,11 @@
 <script>
+import CardCount from './partials/CardCount.vue'
 import CardMoCo from './partials/CardMoCo.vue'
 export default {
     name: 'Main',
     components: {
-        CardMoCo
+        CardMoCo,
+        CardCount
     }
 }
 </script>
@@ -58,6 +60,23 @@ export default {
         </section>
 
 
+        <section class="counterResults">
+            <div class="counters d-flex ">
+
+
+                <CardCount />
+
+                <CardCount />
+
+                <CardCount />
+
+                <CardCount />
+
+
+            </div>
+
+
+        </section>
     </main>
 </template>
 
@@ -164,7 +183,7 @@ main {
 
     .modernCostruction {
         text-align: center;
-        margin: 100px 0;
+        margin-top: 100px;
 
         .title {
             margin: 0 300px;
@@ -176,9 +195,9 @@ main {
                     content: '';
                     position: absolute;
                     background-color: $yellow-color;
-                    width: 12%;
+                    width: 150px;
                     height: 2px;
-                    top: 50px;
+                    top: 150%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                 }
@@ -194,6 +213,40 @@ main {
                 justify-content: space-around;
                 margin-top: 80px;
             }
+        }
+    }
+
+    .counterResults {
+        position: relative;
+        overflow: hidden;
+        height: 600px;
+        background-image: url('home-244125289.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &:after,
+        &:before {
+            content: '';
+            background: white;
+            position: absolute;
+            top: -10px;
+            left: -120px;
+            width: 120%;
+            height: 200px;
+            border-radius: 0 0 50% 50%;
+        }
+
+        &:after {
+            top: auto;
+            bottom: -10px;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .counters {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 }
