@@ -1,11 +1,13 @@
 <script>
 import CardCount from './partials/CardCount.vue'
 import CardMoCo from './partials/CardMoCo.vue'
+import CardWork from './partials/CardWork.vue'
 export default {
     name: 'Main',
     components: {
         CardMoCo,
-        CardCount
+        CardCount,
+        CardWork
     }
 }
 </script>
@@ -74,9 +76,33 @@ export default {
 
 
             </div>
+        </section>
 
+
+        <section class="work">
+            <div class="title">
+                <h2>Explore Recent Work</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt consectetur perspiciatis error natus,
+                    aperiam veritatis officiis eius quibusdam quo soluta quaerat dolores?</p>
+            </div>
+
+            <div class="row d-flex ">
+
+
+                <CardWork />
+
+
+                <CardWork />
+
+
+                <CardWork />
+
+
+            </div>
 
         </section>
+
+
     </main>
 </template>
 
@@ -247,6 +273,37 @@ main {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+        }
+    }
+
+    .work {
+        text-align: center;
+
+        .title {
+            margin: 0 300px;
+
+            h2 {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: $yellow-color;
+                    width: 150px;
+                    height: 2px;
+                    top: 150%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            p {
+                margin-top: 50px;
+            }
+        }
+        .row {
+            justify-content: center;
+            margin: 50px 0;
         }
     }
 }
