@@ -32,7 +32,7 @@ export default {
 
                 .title {
                     color: $white-color;
-                    margin: 0 50px;
+                    margin: 5px 50px;
                 }
             }
 </style>

@@ -209,6 +209,24 @@ export default {
         </section>
 
 
+        <section class="inspiring">
+            <div class="container-small d-flex ">
+                <div class="title d-flex ">
+                    <h2>Building Inspiring Spaces</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt consectetur perspiciatis error
+                        natus,
+                        aperiam veritatis officiis eius quibusdam quo soluta quaerat dolores?</p>
+                </div>
+                <div class="getFree">
+                    <div class="button">
+                        <button>get a free quote</button>
+                    </div>
+                    <p>Only takes a few seconds!</p>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 </template>
 
@@ -295,13 +313,14 @@ main {
             transform: translate(-50%, -50%);
 
             button {
-                padding: 10px 20px;
+                padding: 10px 30px;
                 background-color: $dimgray-color;
-                color: $white-color;
+                color: $whiteSmoke-color;
                 border: 2px solid $white-color;
                 cursor: pointer;
                 text-transform: uppercase;
                 transition: all 0.3S;
+                font-size: 12px;
 
                 &:hover {
                     background-color: $yellow-color;
@@ -337,6 +356,7 @@ main {
 
             p {
                 margin-top: 50px;
+                line-height: 30px;
             }
         }
 
@@ -362,16 +382,16 @@ main {
             content: '';
             background: white;
             position: absolute;
-            top: -10px;
+            top: -170px;
             left: -120px;
             width: 120%;
-            height: 200px;
+            height: 300px;
             border-radius: 0 0 50% 50%;
         }
 
         &:after {
             top: auto;
-            bottom: -10px;
+            bottom: -120px;
             border-radius: 50% 50% 0 0;
         }
 
@@ -407,6 +427,7 @@ main {
 
             p {
                 margin-top: 50px;
+                line-height: 30px;
             }
         }
 
@@ -475,6 +496,7 @@ main {
                 p {
                     margin-top: 50px;
                     color: lighten($dimgray-color, $amount: 20%);
+                    line-height: 30px;
                 }
             }
 
@@ -501,16 +523,16 @@ main {
             content: '';
             background: $whiteSmoke-color;
             position: absolute;
-            top: -10px;
-            left: -150px;
+            top: -200px;
+            left: -120px;
             width: 120%;
-            height: 150px;
+            height: 300px;
             border-radius: 0 0 50% 50%;
         }
 
         &:after {
             top: auto;
-            bottom: -10px;
+            bottom: -200px;
             border-radius: 50% 50% 0 0;
         }
 
@@ -677,6 +699,77 @@ main {
                 justify-content: center;
                 justify-content: space-evenly;
                 margin-top: 50px;
+            }
+        }
+    }
+
+    .inspiring {
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+        background-image: url('about-call-to-action-57862405.jpg');
+        background-repeat: no-repeat;
+        background-position: 0 80%;
+        background-size: cover;
+
+        .container-small {
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 100px;
+
+            .title {
+                flex-direction: column;
+                color: $white-color;
+                width: 60%;
+
+                h2 {
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background-color: $yellow-color;
+                        width: 150px;
+                        height: 2px;
+                        top: 150%;
+                        left: 0;
+
+                    }
+                }
+
+                p {
+                    margin-top: 50px;
+                    line-height: 30px;
+                }
+            }
+
+            .getFree {
+                text-align: center;
+
+                .button {
+
+                    button {
+                        padding: 15px 35px;
+                        background-color: $yellow-color;
+                        color: $dimgray-color;
+                        border: none;
+                        cursor: pointer;
+                        text-transform: uppercase;
+                        margin: 7px;
+                        transition: all 0.3S;
+
+                        &:hover {
+                            background-color: $dimgray-color;
+                            color: $white-color;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+
+                p {
+                    color: $white-color;
+                    margin-top: 10px;
+                }
             }
         }
     }

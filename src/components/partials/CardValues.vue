@@ -72,11 +72,13 @@ export default {
                 background-color: $yellow-color;
                 transition: 0.5s;
                 transform: scale(0.9);
+                cursor: pointer;
             }
 
             &:hover p {
                 color: $yellow-color;
                 transition: 0.5s;
+                cursor: pointer;
             }
         }
 

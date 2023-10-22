@@ -109,8 +109,7 @@ export default {
                                 </li>
                                 <li class="d-flex">
                                     <i class="fa-regular fa-envelope"></i>
-                                    <p>
-                                        info@your-domain.com</p>
+                                    <p>info@your-domain.com</p>
                                 </li>
                                 <li class="d-flex">
                                     <i class="fa-regular fa-clock"></i>
