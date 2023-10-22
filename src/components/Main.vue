@@ -1,6 +1,8 @@
 <script>
 import CardCount from './partials/CardCount.vue'
+import CardFeedback from './partials/CardFeedback.vue'
 import CardMoCo from './partials/CardMoCo.vue'
+import CardPartner from './partials/CardPartner.vue'
 import CardValues from './partials/CardValues.vue'
 import CardWork from './partials/CardWork.vue'
 export default {
@@ -9,7 +11,9 @@ export default {
         CardMoCo,
         CardCount,
         CardWork,
-        CardValues
+        CardValues,
+        CardFeedback,
+        CardPartner
     }
 }
 </script>
@@ -154,17 +158,51 @@ export default {
 
 
         <section class="latestNews">
-            <div class="title">
-                <h2>Latest News</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt consectetur perspiciatis error natus,
-                    aperiam veritatis officiis eius quibusdam quo soluta quaerat dolores?</p>
-            </div>
-            <div class="container-big">
+            <div class="container-small">
+                <div class="title">
+                    <h2>Latest News</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt consectetur perspiciatis error
+                        natus,
+                        aperiam veritatis officiis eius quibusdam quo soluta quaerat dolores?</p>
+                </div>
+
                 <div class="row d-flex ">
 
+                    <CardFeedback />
 
-                    
+                    <CardFeedback />
 
+                    <CardFeedback />
+
+                </div>
+                <div class="footerNews">
+                    <p>VIEW ALL PROJECTS</p>
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <section class="trustedPartners">
+            <div class="container-small">
+                <div class="title">
+                    <h2>Trusted Partners</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt consectetur perspiciatis error
+                        natus,
+                        aperiam veritatis officiis eius quibusdam quo soluta quaerat dolores?</p>
+                </div>
+                <div class="partners d-flex ">
+
+                    <CardPartner />
+
+                    <CardPartner />
+
+                    <CardPartner />
+
+                    <CardPartner />
+
+                    <CardPartner />
 
                 </div>
             </div>
@@ -524,6 +562,7 @@ main {
                     margin: 15px 10px;
                     cursor: pointer;
                 }
+
                 .second {
                     margin-top: 15px;
                     width: 10px;
@@ -540,35 +579,104 @@ main {
     .latestNews {
         text-align: center;
         background-color: $whiteSmoke-color;
+        padding-bottom: 80px;
 
-        .title {
-            margin: 0 300px;
+        .container-small {
+            .title {
 
-            h2 {
-                position: relative;
 
-                &::after {
-                    content: '';
-                    position: absolute;
-                    background-color: $yellow-color;
-                    width: 150px;
-                    height: 2px;
-                    top: 150%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                h2 {
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background-color: $yellow-color;
+                        width: 150px;
+                        height: 2px;
+                        top: 150%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                p {
+                    margin-top: 50px;
+                    line-height: 30px;
                 }
             }
 
-            p {
-                margin-top: 50px;
-                line-height: 30px;
+
+            .row {
+                justify-content: center;
+            }
+
+            .footerNews {
+                position: relative;
+                text-align: center;
+
+                p {
+                    color: $dimgray-color;
+
+                    &::before {
+                        content: " ";
+                        display: block;
+                        height: 2px;
+                        width: 300px;
+                        position: absolute;
+                        top: 50%;
+                        left: 70%;
+                        background: $white-color;
+                    }
+
+                    &::after {
+                        content: " ";
+                        height: 2px;
+                        width: 300px;
+                        background: $white-color;
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        right: 70%;
+                    }
+                }
             }
         }
+    }
 
-        .container-big {
-            .row {
-                justify-content: space-around;
-                margin-top: 80px;
+    .trustedPartners {
+        text-align: center;
+        margin: 80px 0;
+
+        .container-small {
+            .title {
+
+
+                h2 {
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background-color: $yellow-color;
+                        width: 150px;
+                        height: 2px;
+                        top: 150%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                p {
+                    margin-top: 50px;
+                    line-height: 30px;
+                }
+            }
+
+            .partners {
+                justify-content: center;
+                justify-content: space-evenly;
+                margin-top: 50px;
             }
         }
     }
