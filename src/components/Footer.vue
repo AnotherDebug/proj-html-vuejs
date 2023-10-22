@@ -1,9 +1,11 @@
 <script>
+import ContactsFooter from './partials/ContactsFooter.vue';
 import Tweets from './partials/Tweets.vue';
 export default {
     name: 'Footer',
     components: {
-        Tweets
+        Tweets,
+        ContactsFooter
     }
 }
 </script>
@@ -53,7 +55,7 @@ export default {
                             <!-- SINGOLO TWEET -->
                             <tweets />
                             <!-- /SINGOLO TWEET -->
-\
+
 
                         </div>
 
@@ -68,13 +70,9 @@ export default {
 
                         <div class="menuContactUs">
                             <ul>
-                                <li class="d-flex">
-                                    <i class="fa-solid fa-globe"></i>
-                                    <p>Corporate Location
-                                        1600 Amphitheatre Parkway
-                                        London WC1 1BA</p>
-                                </li>
-                                <li class="d-flex">
+                                <ContactsFooter />
+                                
+                                <!-- <li class="d-flex">
                                     <i class="fa-solid fa-house-chimney"></i>
                                     <p>Residential Location
                                         9521 Broadsberry Avenue
@@ -95,7 +93,7 @@ export default {
                                 <li class="d-flex">
                                     <i class="fa-regular fa-clock"></i>
                                     <p>Saturday – Sunday: 9:00 AM – 12:00 PM</p>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -232,14 +230,6 @@ footer {
                     ul {
                         list-style: none;
 
-                        li {
-                            color: lighten($dimgray-color, $amount: 20%);
-                            margin-bottom: 10px;
-
-                            i {
-                                padding-right: 15px;
-                            }
-                        }
                     }
                 }
             }
