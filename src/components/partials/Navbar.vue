@@ -1,6 +1,10 @@
 <script>
+import LinksNav from './LinksNav.vue';
 export default {
-    name: 'Navbar'
+    name: 'Navbar',
+    components: {
+        LinksNav
+    }
 }
 </script>
 
@@ -8,11 +12,15 @@ export default {
 <template>
     <div class="navBar d-flex">
         <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
+            <LinksNav />
+            <LinksNav />
+            <LinksNav />
+            <LinksNav />
+            <LinksNav />
+            <!-- <li><a href="#">ABOUT</a></li>
             <li><a href="#">SERVICES</a></li>
             <li><a href="#">WORK</a></li>
-            <li><a href="#">ARTICLES</a></li>
+            <li><a href="#">ARTICLES</a></li> -->
         </ul>
 
     </div>
@@ -29,35 +37,6 @@ export default {
     ul {
         list-style: none;
         padding-right: 15px;
-
-        li {
-
-            display: inline-block;
-            padding: 0 15px;
-
-            a {
-                position: relative;
-                text-decoration: none;
-                color: $dimgray-color;
-
-                &:hover {
-                    color: $yellow-color;
-                    transition: all 0.2s;
-
-                    &:after {
-                        position: absolute;
-                        content: '\2bc6';
-                        color: $white-color;
-                        font-size: 20px;
-                        top: 59px;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        z-index: 3;
-
-                    }
-                }
-
-            }
-        }
     }
-}</style>
+}
+</style>
