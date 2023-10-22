@@ -739,7 +739,7 @@ main {
 
                 p {
                     margin-top: 50px;
-                    line-height: 30px;
+                    line-height: 20px;
                 }
             }
 
@@ -751,7 +751,7 @@ main {
                     button {
                         padding: 15px 35px;
                         background-color: $yellow-color;
-                        color: $dimgray-color;
+                        color: lighten($dimgray-color, $amount: 20%);
                         border: none;
                         cursor: pointer;
                         text-transform: uppercase;
