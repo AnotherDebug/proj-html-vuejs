@@ -71,6 +71,7 @@ export default {
             &:hover .logo {
                 background-color: $yellow-color;
                 transition: 0.5s;
+                transform: scale(0.9);
             }
 
             &:hover p {

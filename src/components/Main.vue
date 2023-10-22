@@ -119,16 +119,21 @@ export default {
                 </div>
                 <div class="row d-flex ">
 
-                   <CardValues />
+                    <CardValues />
 
-                   <CardValues />
+                    <CardValues />
 
-                   <CardValues />
-                   
-                   <CardValues />
+                    <CardValues />
+
+                    <CardValues />
 
                 </div>
             </div>
+        </section>
+
+
+        <section class="feedback">
+
         </section>
 
 
@@ -278,6 +283,7 @@ main {
         background-image: url('home-244125289.jpg');
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
 
         &:after,
         &:before {
@@ -404,6 +410,34 @@ main {
                 justify-content: center;
                 justify-content: space-around;
             }
+        }
+    }
+
+    .feedback {
+        position: relative;
+        overflow: hidden;
+        height: 600px;
+        background-image: url('home-parallax-144609983.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center 20%;
+
+        &:after,
+        &:before {
+            content: '';
+            background: $whiteSmoke-color;
+            position: absolute;
+            top: -10px;
+            left: -150px;
+            width: 120%;
+            height: 150px;
+            border-radius: 0 0 50% 50%;
+        }
+
+        &:after {
+            top: auto;
+            bottom: -10px;
+            border-radius: 50% 50% 0 0;
         }
     }
 }
