@@ -1,11 +1,13 @@
 <script>
 import ContactsFooter from './partials/ContactsFooter.vue';
+import SocialIcons from './partials/SocialIcons.vue';
 import Tweets from './partials/Tweets.vue';
 export default {
     name: 'Footer',
     components: {
         Tweets,
-        ContactsFooter
+        ContactsFooter,
+        SocialIcons
     }
 }
 </script>
@@ -71,7 +73,7 @@ export default {
                         <div class="menuContactUs">
                             <ul>
                                 <ContactsFooter />
-                                
+
                                 <!-- <li class="d-flex">
                                     <i class="fa-solid fa-house-chimney"></i>
                                     <p>Residential Location
@@ -122,10 +124,13 @@ export default {
                 </div>
                 <div class="social">
                     <ul class="d-flex">
-                        <li>
-                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        </li>
-                        <li>
+
+                        <SocialIcons />
+                        <SocialIcons />
+                        <SocialIcons />
+                        <SocialIcons />
+
+                        <!-- <li>
                             <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
                         </li>
                         <li>
@@ -133,7 +138,7 @@ export default {
                         </li>
                         <li>
                             <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -275,20 +280,7 @@ footer {
 
             .social {
                 ul {
-                    li {
-                        list-style: none;
-
-                        a {
-                            position: relative;
-                            margin-left: 20px;
-                            color: lighten($dimgray-color, $amount: 20%);
-
-                            &:hover {
-                                color: lighten($black-color, $amount: 10%);
-                                transition: 0.5s;
-                            }
-                        }
-                    }
+                    
                 }
             }
         }
