@@ -1,6 +1,9 @@
 <script>
 export default {
-    name: 'CardWork'
+    name: 'CardWork',
+    props: {
+        cardWork: Object
+    }
 }
 </script>
 
@@ -10,20 +13,20 @@ export default {
         <div class="container">
             <div class="card">
                 <div class="front">
-                    <img src="project2-featured-15013609.jpg" alt="">
+                    <img :src="cardWork.image" alt="">
                 </div>
                 <div class="back">
                     <div class="menu d-flex ">
                         <div class="link">
-                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                            <a :href="cardWork.href"><i :class="cardWork.firstIcon"></i></a>
                         </div>
                         <div class="search">
-                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a :href="cardWork.href"><i :class="cardWork.secondIcon"></i></a>
                         </div>
                     </div>
                     <div class="title">
-                        <h4>Florida Health Facility</h4>
-                        <p>Commercial</p>
+                        <h4>{{ cardWork.title }}</h4>
+                        <p>{{ cardWork.text }}</p>
                     </div>
                 </div>
             </div>
