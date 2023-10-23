@@ -5,6 +5,7 @@ import CardMoCo from './partials/CardMoCo.vue'
 import CardPartner from './partials/CardPartner.vue'
 import CardValues from './partials/CardValues.vue'
 import CardWork from './partials/CardWork.vue'
+import HomeOwner from './partials/HomeOwner.vue'
 import { store } from '../data/store'
 export default {
     name: 'Main',
@@ -14,7 +15,8 @@ export default {
         CardWork,
         CardValues,
         CardLatest,
-        CardPartner
+        CardPartner,
+        HomeOwner
     },
     data() {
         return {
@@ -59,9 +61,7 @@ export default {
             <div class="container-big">
                 <div class="row d-flex ">
 
-                    <CardMoCo v-for="(cardMc, index) in store.cardsModernConstr"
-                    :key="index"
-                    :cardMc="cardMc"/>
+                    <CardMoCo v-for="(cardMc, index) in store.cardsModernConstr" :key="index" :cardMc="cardMc" />
 
                 </div>
             </div>
@@ -71,9 +71,7 @@ export default {
         <section class="counterResults">
             <div class="counters d-flex ">
 
-                <CardCount v-for="(count, index) in store.cardsCounter"
-                :key="index"
-                :count="count"/>
+                <CardCount v-for="(count, index) in store.cardsCounter" :key="index" :count="count" />
 
             </div>
         </section>
@@ -88,9 +86,7 @@ export default {
 
             <div class="row d-flex ">
 
-                <CardWork v-for="(cardWork, index) in store.cardsWork"
-                :key="index"
-                :cardWork="cardWork"/>
+                <CardWork v-for="(cardWork, index) in store.cardsWork" :key="index" :cardWork="cardWork" />
 
             </div>
 
@@ -111,9 +107,7 @@ export default {
                 </div>
                 <div class="row d-flex ">
 
-                    <CardValues v-for="(item, index) in store.cardsValues"
-                    :key="index"
-                    :item="item"/>
+                    <CardValues v-for="(item, index) in store.cardsValues" :key="index" :item="item" />
 
                 </div>
             </div>
@@ -121,7 +115,11 @@ export default {
 
 
         <section class="feedback">
-            <div class="title d-flex ">
+
+
+            <HomeOwner />
+
+            <!-- <div class="homeOwner d-flex ">
                 <h2>Our Home Owners Say</h2>
                 <div class="testimonial">
                     <img src="home-testimonial-113165296.jpg" alt="">
@@ -138,6 +136,21 @@ export default {
                 </div>
             </div>
 
+            <div class="homeOwner hide d-flex ">
+                <h2>Our Home Owners Say</h2>
+                <div class="testimonial">
+                    <img src="home-testimonial-84268399.jpg" alt="">
+                </div>
+                <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda pariatur laudantium distinctio labore magnam id molestias harum, nobis iure laboriosam, cum a, perspiciatis ex eaque. Ab repellendus eaque facere?."</p>
+                <div class="nameTestimonial">
+                    <p>harry smith &bull; new home owner</p>
+                </div>
+                <div class="testimonials d-flex ">
+                    <p class="first"></p>
+                    <p class="second"></p>
+                </div>
+            </div> -->
+
         </section>
 
 
@@ -152,9 +165,7 @@ export default {
 
                 <div class="row d-flex ">
 
-                    <CardLatest v-for="(cardL, index) in store.cardsLatest"
-                    :key="index"
-                    :cardL="cardL"/>
+                    <CardLatest v-for="(cardL, index) in store.cardsLatest" :key="index" :cardL="cardL" />
 
                 </div>
                 <div class="footerNews">
@@ -176,9 +187,7 @@ export default {
                 </div>
                 <div class="partners d-flex ">
 
-                    <CardPartner v-for="(itemP, index) in store.iconPartners"
-                    :key="index"
-                    :itemP="itemP"/>
+                    <CardPartner v-for="(itemP, index) in store.iconPartners" :key="index" :itemP="itemP" />
 
                 </div>
             </div>
@@ -511,67 +520,6 @@ main {
             bottom: -200px;
             border-radius: 50% 50% 0 0;
         }
-
-        .title {
-            flex-direction: column;
-            align-items: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            h2 {
-                position: relative;
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    background-color: $yellow-color;
-                    width: 150px;
-                    height: 2px;
-                    top: 150%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                }
-            }
-
-            .testimonial {
-                width: 110px;
-                height: 110px;
-                margin-top: 40px;
-
-                img {
-                    height: 100%;
-                    border-radius: 50%;
-                }
-            }
-
-            p {
-                margin-top: 20px;
-
-            }
-
-            .testimonials {
-                .first {
-                    width: 10px;
-                    height: 10px;
-                    background-color: $white-color;
-                    border-radius: 50%;
-                    margin: 15px 10px;
-                    cursor: pointer;
-                }
-
-                .second {
-                    margin-top: 15px;
-                    width: 10px;
-                    height: 10px;
-                    border: 1px solid $white-color;
-                    border-radius: 50%;
-                    cursor: pointer;
-                }
-            }
-        }
-
     }
 
     .latestNews {
