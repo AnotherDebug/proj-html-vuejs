@@ -71,15 +71,9 @@ export default {
         <section class="counterResults">
             <div class="counters d-flex ">
 
-
-                <CardCount />
-
-                <CardCount />
-
-                <CardCount />
-
-                <CardCount />
-
+                <CardCount v-for="(count, index) in store.cardsCounter"
+                :key="index"
+                :count="count"/>
 
             </div>
         </section>
