@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'CardFeedback'
+    name: 'CardLatest'
 }
 </script>
 

@@ -1,6 +1,6 @@
 <script>
 import CardCount from './partials/CardCount.vue'
-import CardFeedback from './partials/CardFeedback.vue'
+import CardLatest from './partials/CardLatest.vue'
 import CardMoCo from './partials/CardMoCo.vue'
 import CardPartner from './partials/CardPartner.vue'
 import CardValues from './partials/CardValues.vue'
@@ -12,7 +12,7 @@ export default {
         CardCount,
         CardWork,
         CardValues,
-        CardFeedback,
+        CardLatest,
         CardPartner
     }
 }
@@ -168,11 +168,11 @@ export default {
 
                 <div class="row d-flex ">
 
-                    <CardFeedback />
+                    <CardLatest />
 
-                    <CardFeedback />
+                    <CardLatest />
 
-                    <CardFeedback />
+                    <CardLatest />
 
                 </div>
                 <div class="footerNews">
