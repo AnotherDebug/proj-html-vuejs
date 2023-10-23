@@ -1,6 +1,9 @@
 <script>
 export default {
-    name: 'CardMoCo'
+    name: 'CardMoCo',
+    props: {
+        cardMc: Object
+    }
 }
 </script>
 
@@ -10,20 +13,15 @@ export default {
         <div class="card-container">
             <div class="card">
                 <div class="front-content">
-                    <i class="fa-regular fa-building fa-2xl"></i>
-                    <h1>Buildings</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam tempora assumenda
-                        nobis.</p>
+                    <i :class="cardMc.icon"></i>
+                    <h1>{{ cardMc.title }}</h1>
+                    <p>{{ cardMc.text }}</p>
                 </div>
                 <div class="content">
-                    <h3 class="heading">artfully crafted</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipii
-                        voluptas ten mollitia pariatur odit, ab
-                        minus ratione adipisci accusamus.
-                    </p>
+                    <h3 class="heading">{{ cardMc.backTitle }}</h3>
+                    <p>{{ cardMc.backText }}</p>
                     <div class="button">
-                        <button>get a quote</button>
+                        <button>{{ cardMc.buttonText }}</button>
                     </div>
                 </div>
             </div>
