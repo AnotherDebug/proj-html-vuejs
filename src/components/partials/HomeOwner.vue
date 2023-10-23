@@ -57,6 +57,11 @@ export default {
         }
     }
 
+    .nameTestimonial {
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
     .testimonial {
         width: 110px;
         height: 110px;
