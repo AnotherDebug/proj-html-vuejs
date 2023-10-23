@@ -117,7 +117,9 @@ export default {
         <section class="feedback">
 
 
-            <HomeOwner />
+            <HomeOwner v-for="owner in store.homeOwnerList"
+            :key="owner.id"
+            :owner="owner"/>
 
             <!-- <div class="homeOwner d-flex ">
                 <h2>Our Home Owners Say</h2>
