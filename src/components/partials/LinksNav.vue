@@ -1,12 +1,15 @@
 <script>
 export default {
-    name: 'LinksNav'
+    name: 'LinksNav',
+    props: {
+        link: Object
+    }
 }
 </script>
 
 
 <template>
-    <li><a href="#">HOME</a></li>
+    <li><a :href="link.href">{{ link.text }}</a></li>
 </template>
 
 
@@ -21,6 +24,7 @@ li {
     a {
         position: relative;
         text-decoration: none;
+        text-transform: uppercase;
         color: $dimgray-color;
 
         &:hover {
