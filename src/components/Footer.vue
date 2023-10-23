@@ -68,30 +68,10 @@ export default {
 
                         <div class="menuContactUs">
                             <ul>
-                                <ContactsFooter />
+                                <ContactsFooter v-for="(contact, index) in store.contactsMenu"
+                                :key="index"
+                                :contact="contact"/>
 
-                                <!-- <li class="d-flex">
-                                    <i class="fa-solid fa-house-chimney"></i>
-                                    <p>Residential Location
-                                        9521 Broadsberry Avenue
-                                        Paddington RC7 9ZA</p>
-                                </li>
-                                <li class="d-flex">
-                                    <i class="fa-solid fa-phone-flip"></i>
-                                    <p>1.800.458.556 / 1.800.532.2112</p>
-                                </li>
-                                <li class="d-flex">
-                                    <i class="fa-regular fa-envelope"></i>
-                                    <p>info@your-domain.com</p>
-                                </li>
-                                <li class="d-flex">
-                                    <i class="fa-regular fa-clock"></i>
-                                    <p>Monday – Friday: 9:00 AM – 6:00 PM</p>
-                                </li>
-                                <li class="d-flex">
-                                    <i class="fa-regular fa-clock"></i>
-                                    <p>Saturday – Sunday: 9:00 AM – 12:00 PM</p>
-                                </li> -->
                             </ul>
                         </div>
                     </div>
