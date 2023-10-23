@@ -9,10 +9,10 @@ export default {
     <div class="col">
         <div class="card d-flex ">
             <div class="heading">
-                <div class="logo">
+                <div class="logo" style="background-color: salmon;">
                     <i class="fa-solid fa-house fa-2xl"></i>
                 </div>
-                <p>Great service</p>
+                <p class="title">Great service</p>
             </div>
             <div class="info">
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam expedita molestiae
@@ -42,7 +42,6 @@ export default {
                 width: 100px;
                 height: 100px;
                 font-size: 25px;
-                background-color: $darkTurquoise-color;
                 border-radius: 50%;
                 line-height: 100px;
 
@@ -69,7 +68,7 @@ export default {
             }
 
             &:hover .logo {
-                background-color: $yellow-color;
+                background-color: $yellow-color !important;
                 transition: 0.5s;
                 transform: scale(0.9);
                 cursor: pointer;
@@ -92,4 +91,9 @@ export default {
         }
     }
 }
+.col:nth-child(2) {
+                    .logo {
+                        background-color: $dodgerBlue-color;
+                    }
+                }
 </style>
