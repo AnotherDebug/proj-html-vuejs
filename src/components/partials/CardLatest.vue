@@ -1,6 +1,9 @@
 <script>
 export default {
-    name: 'CardLatest'
+    name: 'CardLatest',
+    props: {
+        cardL: Object
+    }
 }
 </script>
 
@@ -10,21 +13,21 @@ export default {
         <div class="card-container">
             <div class="card">
                 <div class="front-content">
-                    <img src="blog-post-134132600.jpg" alt="">
+                    <img :src="cardL.image" alt="">
                 </div>
                 <div class="content">
                     <div class="retro">
                         <div class="menu d-flex ">
                             <div class="link">
-                                <a href="#"><i class="fa-solid fa-link"></i></a>
+                                <a :href="cardL.href"><i :class="cardL.firstIcon"></i></a>
                             </div>
                             <div class="search">
-                                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                                <a :href="cardL.href"><i :class="cardL.secondIcon"></i></a>
                             </div>
                         </div>
                         <div class="title">
-                            <h4>Florida Health Facility</h4>
-                            <p>Commercial</p>
+                            <h4>{{ cardL.title }}</h4>
+                            <p>{{ cardL.text }}</p>
                         </div>
                     </div>
                 </div>
@@ -33,12 +36,10 @@ export default {
         </div>
         <div class="bodyCard">
             <div class="titleBody">
-                <h3>Redeveloping Florida’s Remote Southern Coast</h3>
-                <p>December 7th, 2015</p>
+                <h3>{{ cardL.bodyTitle }}</h3>
+                <p>{{ cardL.bodyDate }}</p>
                 <div class="description">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, vero tempore
-                        minus officiis facere repellat amet a fugit tenetur id quasi, quidem quos
-                        voluptates esse? Quis natus quo officiis dolore.</p>
+                    <p>{{ cardL.bodyText }}</p>
                 </div>
             </div>
         </div>
