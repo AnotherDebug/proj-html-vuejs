@@ -1,21 +1,27 @@
 <script>
 export default {
-    name: 'HomeOwner'
+    name: 'HomeOwner',
+    props: {
+        owner: Object,
+    },
+    data() {
+        return{
+            counter: 0
+        }
+    },
 }
 </script>
 
 
 <template>
-    <div class="homeOwner d-flex ">
-        <h2>Our Home Owners Say</h2>
+    <div class="homeOwner d-flex" :class="{'hide': this.owner.id !== counter}">
+        <h2>{{ owner.title }}</h2>
         <div class="testimonial">
-            <img src="home-testimonial-113165296.jpg" alt="">
+            <img :src="owner.image" alt="">
         </div>
-        <p>"No man but feels more of a man in the world if he have but a bit of ground that he can call his own.
-            However small it is on the surface, it is four thousand miles deep; and that is a very handsome
-            property."</p>
+        <p>{{ `"${owner.text}"` }}</p>
         <div class="nameTestimonial">
-            <p>harry smith &bull; new home owner</p>
+            <p>{{ owner.name }}</p>
         </div>
         <div class="testimonials d-flex ">
             <p class="first"></p>
@@ -26,8 +32,8 @@ export default {
 
 
 <style lang="scss" scoped>
-
 @use '../../scss/partials/variables' as *;
+
 .homeOwner {
     flex-direction: column;
     align-items: center;
