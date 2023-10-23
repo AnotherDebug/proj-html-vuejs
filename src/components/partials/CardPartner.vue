@@ -1,20 +1,23 @@
 <script>
 export default {
-    name: 'CardPartner'
+    name: 'CardPartner',
+    props: {
+        itemP: Object
+    }
 }
 </script>
 
 
 <template>
     <div class="cardPartner">
-        <img src="home-logo1-219096700-320x202.png" alt="">
+        <img :src="itemP.icon" alt="">
     </div>
 </template>
 
 
 <style lang="scss" scoped>
 .cardPartner {
-    width: 100%;
+    width: 200px;
     padding: 20px;
 
     img {
