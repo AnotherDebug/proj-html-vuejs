@@ -1,9 +1,15 @@
 <script>
+import { store } from '../../data/store';
 import LinksNav from './LinksNav.vue';
 export default {
     name: 'Navbar',
     components: {
         LinksNav
+    },
+    data() {
+        return {
+            store
+        }
     }
 }
 </script>
@@ -12,15 +18,10 @@ export default {
 <template>
     <div class="navBar d-flex">
         <ul>
-            <LinksNav />
-            <LinksNav />
-            <LinksNav />
-            <LinksNav />
-            <LinksNav />
-            <!-- <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">WORK</a></li>
-            <li><a href="#">ARTICLES</a></li> -->
+            <LinksNav v-for="(link, index) in store.topbarMenu" 
+            :key="index"
+            :link="link"/>
+           
         </ul>
 
     </div>
