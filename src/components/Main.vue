@@ -88,15 +88,9 @@ export default {
 
             <div class="row d-flex ">
 
-
-                <CardWork />
-
-
-                <CardWork />
-
-
-                <CardWork />
-
+                <CardWork v-for="(cardWork, index) in store.cardsWork"
+                :key="index"
+                :cardWork="cardWork"/>
 
             </div>
 
