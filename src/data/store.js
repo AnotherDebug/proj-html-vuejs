@@ -142,6 +142,23 @@ export const store = reactive({
 
   ],
 
+  homeOwnerList: [
+    {
+      id: 0,
+      title: "Our Home Owners Say",
+      image: "home-testimonial-113165296.jpg",
+      text: "No man but feels more of a man in the world if he have but a bit of ground that he can call his own. However small it is on the surface, it is four thousand miles deep; and that is a very handsome property.",
+      name: "harry smith &bull; new home owner",
+    },
+    {
+      id: 1,
+      title: "Our Home Owners Say",
+      image: "home-testimonial-84268399.jpg",
+      text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda pariatur laudantium distinctio labore magnam id molestias harum, nobis iure laboriosam, cum a, perspiciatis ex eaque. Ab repellendus eaque facere!.",
+      name: "harry smith &bull; new home owner",
+    },
+  ],
+
   cardsLatest: [
     {
       image: "blog-post-134132600.jpg",
