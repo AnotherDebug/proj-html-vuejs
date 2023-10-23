@@ -1,6 +1,9 @@
 <script>
 export default {
-    name: 'CardValues'
+    name: 'CardValues',
+    props: {
+        item: Object
+    }
 }
 </script>
 
@@ -9,14 +12,13 @@ export default {
     <div class="col">
         <div class="card d-flex ">
             <div class="heading">
-                <div class="logo" style="background-color: salmon;">
-                    <i class="fa-solid fa-house fa-2xl"></i>
+                <div class="logo">
+                    <i :class="item.icon"></i>
                 </div>
-                <p class="title">Great service</p>
+                <p class="title">{{ item.title }}</p>
             </div>
             <div class="info">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam expedita molestiae
-                </p>
+                <p>{{ item.text }}</p>
             </div>
         </div>
     </div>
@@ -24,8 +26,8 @@ export default {
 
 
 <style lang="scss" scoped>
-
 @use '../../scss/partials/variables' as *;
+
 .col {
     text-align: center;
     width: calc(100% / 4);
@@ -91,9 +93,28 @@ export default {
         }
     }
 }
+
+.col:nth-child(1) {
+    .logo {
+        background-color: $darkTurquoise-color;
+    }
+}
+
 .col:nth-child(2) {
-                    .logo {
-                        background-color: $dodgerBlue-color;
-                    }
-                }
+    .logo {
+        background-color: $dodgerBlue-color;
+    }
+}
+
+.col:nth-child(3) {
+    .logo {
+        background-color: $orange-color;
+    }
+}
+
+.col:nth-child(4) {
+        .logo {
+            background-color: $green-color;
+        }
+    }
 </style>
