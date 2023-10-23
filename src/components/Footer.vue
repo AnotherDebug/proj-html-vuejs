@@ -2,12 +2,18 @@
 import ContactsFooter from './partials/ContactsFooter.vue';
 import SocialIcons from './partials/SocialIcons.vue';
 import Tweets from './partials/Tweets.vue';
+import { store } from '../data/store'; 
 export default {
     name: 'Footer',
     components: {
         Tweets,
         ContactsFooter,
         SocialIcons
+    },
+    data() {
+        return {
+            store
+        }
     }
 }
 </script>
@@ -43,21 +49,11 @@ export default {
 
                         <div class="boxTweets d-flex">
 
-
                             <!-- SINGOLO TWEET -->
-                            <tweets />
+                            <tweets v-for="(tweet, index) in store.tweetsList"
+                            :key="index"
+                            :tweet="tweet"/>
                             <!-- /SINGOLO TWEET -->
-
-
-                            <!-- SINGOLO TWEET -->
-                            <tweets />
-                            <!-- /SINGOLO TWEET -->
-
-
-                            <!-- SINGOLO TWEET -->
-                            <tweets />
-                            <!-- /SINGOLO TWEET -->
-
 
                         </div>
 
@@ -216,7 +212,7 @@ footer {
                     }
 
                     &:hover {
-                        background-color: #000;
+                        background-color: $indigo-color;
                     }
 
                     padding-top: 30px;
