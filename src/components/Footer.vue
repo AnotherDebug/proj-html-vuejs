@@ -101,20 +101,10 @@ export default {
                 <div class="social">
                     <ul class="d-flex">
 
-                        <SocialIcons />
-                        <SocialIcons />
-                        <SocialIcons />
-                        <SocialIcons />
-
-                        <!-- <li>
-                            <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        </li> -->
+                        <SocialIcons v-for="(icon, index) in store.socialIcons"
+                        :key="index"
+                        :icon="icon"/>
+    
                     </ul>
                 </div>
             </div>
@@ -251,12 +241,6 @@ footer {
                         color: $yellow-color;
                         transition: 0.5s;
                     }
-                }
-            }
-
-            .social {
-                ul {
-                    
                 }
             }
         }
