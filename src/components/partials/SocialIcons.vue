@@ -1,13 +1,16 @@
 <script>
 export default {
-    name: 'SocialIcons'
+    name: 'SocialIcons',
+    props: {
+        icon: Object
+    }
 }
 </script>
 
 
 <template>
     <li>
-        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a :href="icon.href" :title="icon.title"><i :class="icon.icon"></i></a>
     </li>
 </template>
 
