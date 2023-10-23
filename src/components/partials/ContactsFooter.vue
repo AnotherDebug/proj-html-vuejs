@@ -1,16 +1,17 @@
 <script>
 export default {
-    name: 'ContactsFooter'
+    name: 'ContactsFooter',
+    props: {
+        contact: Object
+    }
 }
 </script>
 
 
 <template>
     <li class="d-flex">
-        <i class="fa-solid fa-globe"></i>
-        <p>Corporate Location
-            1600 Amphitheatre Parkway
-            London WC1 1BA</p>
+        <i :class="contact.icon"></i>
+        <p>{{ contact.text }}</p>
     </li>
 </template>
 
