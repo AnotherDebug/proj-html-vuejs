@@ -146,7 +146,7 @@ export const store = reactive({
     {
       image: "blog-post-134132600.jpg",
       bodyTitle: "Redeveloping Florida’s Remote Southern Coast",
-      bodyDate: "December 7th, 2015",
+      bodyDate: "December 7th, 2022",
       bodyText: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, vero tempore minus officiis facere repellat amet a fugit tenetur id quasi, quidem quos voluptates esse? Quis natus quo officiis dolore.",
       href: "#",
       firstIcon: "fa-solid fa-link",
@@ -157,7 +157,7 @@ export const store = reactive({
     {
       image: "blog-post-92486644.jpg",
       bodyTitle: "How We Manage Large Construction Projects",
-      bodyDate: "December 7th, 2015",
+      bodyDate: "December 7th, 2022",
       bodyText: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, vero tempore minus officiis facere repellat amet a fugit tenetur id quasi, quidem quos voluptates esse? Quis natus quo officiis dolore.",
       href: "#",
       firstIcon: "fa-solid fa-link",
@@ -168,7 +168,7 @@ export const store = reactive({
     {
       image: "blog-post-332773904.jpg",
       bodyTitle: "Future proofing a modern home",
-      bodyDate: "December 6th, 2015",
+      bodyDate: "December 6th, 2022",
       bodyText: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, vero tempore minus officiis facere repellat amet a fugit tenetur id quasi, quidem quos voluptates esse? Quis natus quo officiis dolore.",
       href: "#",
       firstIcon: "fa-solid fa-link",

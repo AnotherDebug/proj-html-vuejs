@@ -152,11 +152,9 @@ export default {
 
                 <div class="row d-flex ">
 
-                    <CardLatest />
-
-                    <CardLatest />
-
-                    <CardLatest />
+                    <CardLatest v-for="(cardL, index) in store.cardsLatest"
+                    :key="index"
+                    :cardL="cardL"/>
 
                 </div>
                 <div class="footerNews">
