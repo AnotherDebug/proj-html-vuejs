@@ -1,6 +1,9 @@
 <script>
 export default {
-    name: 'Tweets'
+    name: 'Tweets',
+    props: {
+        tweet: Object
+    }
 }
 </script>
 
@@ -9,36 +12,30 @@ export default {
     <!-- SINGOLO TWEET -->
     <div class="boxTweet d-flex ">
         <div class="Logo">
-            <img src="3a74ce3d0532b7773b174c45ca3bd05a_normal.png" alt="">
+            <img :src="tweet.logo" alt="">
         </div>
         <div class="infoTweet">
             <div class="tweet ">
                 <div class="title d-flex ">
-                    <h5>ThemeFusion</h5>
-                    <i class="fa-brands fa-twitter"></i>
+                    <h5>{{ tweet.title }}</h5>
+                    <i :class="tweet.icon"></i>
                 </div>
-                <h5>@Theme_Fusion</h5>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit suscipit nam
-                    mollitia
-                    ut
-                    consequuntur. Eaque itaque officiis et ratione, porro sapiente quidem atque
-                    ipsam
-                    mollitia
-                    illo, magni, iste optio dolore.</p>
+                <h5>{{ tweet.ashTitle }}</h5>
+                <p>{{ tweet.bodyText }}</p>
                 <div class="img">
-                    <img src="En2TRxLW4AEiWUN.jpeg" alt="img">
+                    <img :src="tweet.image" alt="img">
                 </div>
                 <div class="tweetMenu d-flex ">
                     <div class="likeShare d-flex">
                         <div class="like">
-                            <i class="fa-regular fa-heart"></i>
+                            <i :class="tweet.like"></i>
                         </div>
                         <div class="share">
-                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <i :class="tweet.share"></i>
                         </div>
                     </div>
                     <div class="time">
-                        <p>22h</p>
+                        <p>{{ tweet.bodyDate }}</p>
                     </div>
                 </div>
             </div>
