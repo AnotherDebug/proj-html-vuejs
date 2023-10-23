@@ -5,6 +5,7 @@ import CardMoCo from './partials/CardMoCo.vue'
 import CardPartner from './partials/CardPartner.vue'
 import CardValues from './partials/CardValues.vue'
 import CardWork from './partials/CardWork.vue'
+import { store } from '../data/store'
 export default {
     name: 'Main',
     components: {
@@ -14,6 +15,11 @@ export default {
         CardValues,
         CardLatest,
         CardPartner
+    },
+    data() {
+        return {
+            store
+        }
     }
 }
 </script>
@@ -53,15 +59,9 @@ export default {
             <div class="container-big">
                 <div class="row d-flex ">
 
-
-                    <CardMoCo />
-
-                    <CardMoCo />
-
-                    <CardMoCo />
-
-                    <CardMoCo />
-
+                    <CardMoCo v-for="(cardMc, index) in store.cardsModernConstr"
+                    :key="index"
+                    :cardMc="cardMc"/>
 
                 </div>
             </div>
