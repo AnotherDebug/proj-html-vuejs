@@ -253,7 +253,7 @@ export const store = reactive({
       text: "Residential Location 9521 Broadsberry Avenue Paddington RC7 9ZA",
     },
     {
-      icon: "ffa-solid fa-phone-flip",
+      icon: "fa-solid fa-phone-flip",
       text: "1.800.458.556 / 1.800.532.2112",
     },
     {
