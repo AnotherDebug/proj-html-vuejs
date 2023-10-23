@@ -111,13 +111,9 @@ export default {
                 </div>
                 <div class="row d-flex ">
 
-                    <CardValues />
-
-                    <CardValues />
-
-                    <CardValues />
-
-                    <CardValues />
+                    <CardValues v-for="(item, index) in store.cardsValues"
+                    :key="index"
+                    :item="item"/>
 
                 </div>
             </div>
