@@ -84,7 +84,9 @@ export default {
                         </div>
 
                         <div class="map">
-                            <img src="../assets/images/staticmap.png" alt="">
+                            <div class="place">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9931.995910386646!2d-0.21818932343597527!3d51.51323475292021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760fe2d0cda3a1%3A0x9020e6e0f234ea4a!2sNotting%20Hill%2C%20London%2C%20UK!5e0!3m2!1sen!2sit!4v1698063993135!5m2!1sen!2sit" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -210,10 +212,6 @@ footer {
 
                 .map {
                     padding-top: 30px;
-
-                    img {
-                        width: 100%;
-                    }
                 }
             }
         }
