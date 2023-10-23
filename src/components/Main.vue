@@ -176,15 +176,9 @@ export default {
                 </div>
                 <div class="partners d-flex ">
 
-                    <CardPartner />
-
-                    <CardPartner />
-
-                    <CardPartner />
-
-                    <CardPartner />
-
-                    <CardPartner />
+                    <CardPartner v-for="(itemP, index) in store.iconPartners"
+                    :key="index"
+                    :itemP="itemP"/>
 
                 </div>
             </div>
