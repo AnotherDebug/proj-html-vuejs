@@ -1,15 +1,18 @@
 <script>
 export default {
-    name: 'CardCount'
+    name: 'CardCount',
+    props: {
+        count: Object
+    }
 }
 </script>
 
 
 <template>
     <div class="counter">
-        <i class="fa-solid fa-suitcase fa-2xl"></i>
-        <p class="countNum">3534</p>
-        <p class="title">PLANNING APPLICATIONS</p>
+        <i :class="count.icon"></i>
+        <p class="countNum">{{ count.numbers }}</p>
+        <p class="title">{{ count.title }}</p>
     </div>
 </template>
 
@@ -20,7 +23,7 @@ export default {
 .counter {
                 color: $yellow-color;
                 text-align: center;
-
+                text-transform: uppercase;
 
                 i {
                     margin-bottom: 30px;
